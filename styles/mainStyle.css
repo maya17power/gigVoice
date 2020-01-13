@@ -1,0 +1,29 @@
+
+.jumbotron{
+  padding-bottom: 0rem;
+}
+
+#gigVoice{
+  font-family: 'Pacifico', cursive;
+}
+#subTitle{
+  margin-top: 2rem;
+}
+#version {
+
+}
+
+.subTitleAndVersion {
+    font-family: 'Gayathri', sans-serif;
+}
+#btnVersion{
+  font-family: 'Gayathri', sans-serif;
+  font-size: .8em;
+  color: black;
+  background-color: transparent;
+  border: none;
+}
+
+#code {
+  color: green;
+}

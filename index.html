@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--responsive meta-->
+    <title>gigVoice</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/mainStyle.css">
+
+    <!-- FONTS: -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gayathri|Oxygen|Pacifico&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+        <div class="jumbotron text-center">
+          <h1 id="gigVoice">gigVoice</h1>
+          <p id="subTitle" class="subTitleAndVersion">2gig Panel Voice codes</p>
+          <p id="version" class="subTitleAndVersion text-sm-left">
+
+            <!-- The Modal -->
+            <button id="btnVersion" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Version 1.0</button>
+            </small>
+
+             <div class="modal fade" id="myModal">
+               <div class="modal-dialog modal-sm">
+                 <div class="modal-content">
+
+                   <!-- Modal Header -->
+                   <div class="modal-header">
+                     <h4 id="gigVoice" class="modal-title">gigVoice, Version 1.0</h4>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   </div>
+
+                   <!-- Modal body -->
+                   <div class="modal-body">
+                     <p class="subTitleAndVersion text-left"><small>
+                     Altho very simple but affective, this version allowes security installers to search voice codes for Gen2 2gig panels.</br>
+                     Type a word in the search box, for example "home" or "front" then clicking Go!</br>
+                     If there's a match, the 2gig voice code equivalent will be displayed.
+                     Otherwise the program will output "No entries found".</br></br>
+                     Going forward, there will be updates to the program which will allow installers to view voice codes in alpha order.
+                   </small><p>
+                   </div>
+                   <!-- Modal footer -->
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                   </div>
+
+                 </div>
+               </div>
+             </div>
+          </p>
+        </div>
+
+        <div class="subTitleAndVersion container">
+          <div class="row">
+            <div class="col-sm-4 text-center">
+
+              <form class="form-inline text-center">
+              <!-- <label for="inlineFormInputSearch">Code search:</label> -->
+
+              <div class="input-group mb-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="door, alarm, etc." aria-label="searchInput" aria-describedby="btnGo">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-primary" type="button" id="btnGo">Go!</button>
+                </div>
+              </div>
+              </form>
+              <!-- <p></p> -->
+            </div>
+            <div class="col-sm-4 text-center">
+              <h3 id="code"></h3>
+              <!-- <p></p> -->
+            </div>
+            <div class="col-sm-4 text-center">
+              <!-- <h3>Column 3</h3>
+              <p></p> -->
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer font-small blue pt-4">
+          <div class="container-fluid text-center text-md-left">
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:</div>
+          </div>
+        </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</html>
