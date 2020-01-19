@@ -293,31 +293,43 @@ window.addEventListener("load", function(){
   // const vals = Object.values(gigVoice); // just values of the keys
   // const objs = Object.entries(gigVoice); // all data
 
-  document.getElementById("btnGo").addEventListener("click",voiceCheck);
+  document.getElementById("btnGo").addEventListener("click",countWords);
+
+  //STRING TRIMMER
+    function countWords(){
+    //Clear list
+    var ul = document.getElementById("display","stats");
+    while(ul.firstChild) ul.removeChild(ul.firstChild);
+
+    //Turn input to UpperCase
+    var w = document.getElementById("searchInput").value.toUpperCase();
+    //remove end spacing
+    w = w.replace(/(^\s*)|(\s*$)/gi,"");
+    //gather 2 or more spacing to 1
+    w = w.replace(/[ ]{2,}/gi," ");
+    //exclude new line with start spacing
+    w = w.replace(/\n /,"\n");
+    //split string
+    w = w.split(' ')
+    return voiceCheck(w);
+    }
 
   //FILTER METHOD
-  function voiceCheck(){
-    const search = document.getElementById("searchInput").value.toUpperCase();
-    const myArray = keys.filter(function(word){
-      return word == search;
-    });
-      return found(myArray);
+  function voiceCheck(search){
+    //words found count
+    var status = document.getElementById("stats");
+    var found = [];
+
+      for(var i = 0; i < search.length; i++){
+        var myArray = keys.filter(function(word){
+          if(word == search[i]){
+            document.getElementById('searchInput').value = '';
+            found.push(gigVoice[search[i]]);
+            display.innerHTML += "<li class='list-group-item list-group-item-action'>" + search[i] + " : " + gigVoice[search[i]] + "</li>";
+          }
+        });
+      }
+      //system output word count
+      stats.innerHTML = "<li class='list-group-item list-group-item-action'> Found " + found.length + " of " + search.length + "</li>";
   };
-
-  function found(f){
-    var noValue = f.every(function(v){
-      return v <= 0;
-    });
-
-    if (noValue == true){
-        console.log("No entries found.");
-        return code.innerHTML = "No entries found."
-    }
-    else{
-        console.log(f + " : " + gigVoice[f]);
-        document.getElementById('searchInput').value = '';
-        return code.innerHTML = f + " : " + gigVoice[f];
-    }
-  }
-
 });
