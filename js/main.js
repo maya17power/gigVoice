@@ -330,6 +330,6 @@ window.addEventListener("load", function(){
         });
       }
       //system output word count
-      stats.innerHTML = "<li class='list-group-item list-group-item-action'> Found " + found.length + " of " + search.length + "</li>";
+      stats.innerHTML = "<li class='list-group-item'> Found " + found.length + " of " + search.length + "</li>";
   };
 });
