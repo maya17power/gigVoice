@@ -20,36 +20,44 @@
     <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
       <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
       <ul id="menu" class="list-group list-group-flush">
-        <li class='list-group-item list-group-item-action'><a href="index.html">Word Search</a></li>
-        <li class='list-group-item list-group-item-action'><a href="#">Word Alpha List</a></li>
+        <a href="index.html"><li class='list-group-item list-group-item-action'>Word Search</li></a>
+        <a href="#"><li class='list-group-item list-group-item-action'>Voice Descriptors</li></a>
+        <a href="#"><li class='list-group-item list-group-item-action'>Equipment Codes</li></a>
       </ul>
     </div>
 
         <div class="jumbotron text-center">
           <div id="main">
-          <div class="text-left">
-            <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
-          </div>
-          <h1 id="gigVoice">gigVoice</h1>
-          <p id="subTitle" class="subTitleAndVersion">2gig Panel Voice codes</p>
-          <p id="version" class="subTitleAndVersion text-sm-left">
+            <div class="text-left">
+              <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+            </div>
+
+              <h1 id="gigVoice">gigVoice</h1>
+              <p id="subTitle" class="subTitleAndVersion">2gig Panel Voice codes</p>
+              <button id="btnVersion" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Version 1.2</button>
+                <div class="col-xl-12 text-center columns">
+                  <p class="subTitleAndVersion">
+                     <div class="input-group mb-3">
+                        <input type="text" id="searchInput" class="form-control" placeholder="door alarm, etc." aria-label="searchInput" aria-describedby="btnGo">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-primary" type="button" id="btnGo">Go!</button>
+                          </div>
+                     </div>
+                  </p>
+                 </div>
 
             <!-- The Modal -->
-            <button id="btnVersion" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Version 1.2</button>
-            </small>
-
              <div class="modal fade" id="myModal">
                <div class="modal-dialog modal-sm">
                  <div class="modal-content">
 
-                   <!-- Modal Header -->
-                   <div class="modal-header">
+                     <!-- Modal Header -->
+                     <div class="modal-header">
+                       <h4 id="gigVoice" class="modal-title">gigVoice, Version 1.2</h4>
+                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     </div>
 
-                     <h4 id="gigVoice" class="modal-title">gigVoice, Version 1.2</h4>
-                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                   </div>
-
-                   <button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-white w3-left-align">Version 1.0</button>
+                   <button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-white w3-left-align">Version 1.0 - Jan/08/2020</button>
                    <div id="Demo1" class="w3-container w3-hide">
                      <div class="modal-body">
                        <p class="subTitleAndVersion text-left">
@@ -63,7 +71,7 @@
                         <p>
                      </div>
                    </div>
-                   <button onclick="myFunction('Demo2')" class="w3-btn w3-block w3-white w3-left-align">Version 1.2</button>
+                   <button onclick="myFunction('Demo2')" class="w3-btn w3-block w3-white w3-left-align">Version 1.2 - Jan/19/2020</button>
                    <div id="Demo2" class="w3-container w3-show">
                      <div class="modal-body">
                        <p class="subTitleAndVersion text-left">
@@ -88,7 +96,6 @@
                    <div class="modal-footer">
                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                    </div>
-
                  </div>
                </div>
              </div>
@@ -97,30 +104,26 @@
 
         <div class="subTitleAndVersion container">
           <div class="row">
-            <div class="col-sm-4 text-center">
-              <div class="col-sm-4 text-center">
-                <ul class="list-group list-group-flush" id="stats"></ul>
-              <form class="form-inline text-center">
-              <!-- <label for="inlineFormInputSearch">Code search:</label> -->
-
-              <div class="input-group mb-3">
-                <input type="text" id="searchInput" class="form-control" placeholder="door alarm, etc." aria-label="searchInput" aria-describedby="btnGo">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-primary" type="button" id="btnGo">Go!</button>
-                </div>
+            <div class="col-xl-12 text-center">
+              <div class="col-xl-12 text-center">
+                <ul class="list-group list-group-flush " id="stats"></ul>
               </div>
-              </form>
-              <!-- <p></p> -->
-            </div>
-            <div class="col-sm-4 text-center">
-                <ul class="list-group list-group-flush" id="display">
-                </ul>
-              <!-- <p></p> -->
-            </div>
-            <div class="col-sm-4 text-center">
-              <!-- <h3>Column 3</h3>
-              <p></p> -->
-            </div>
+              <div class="col-xl-12 text-center">
+                  <ul class="list-group list-group-flush" id="display">
+                  </ul>
+              </div>
+              <div class="col-xl-12 text-center">
+                <h3>Column 3</h3>
+                <p></p>
+              </div>
+              <div class="col-xl-12 text-center">
+                <h3>Column 4</h3>
+                <p></p>
+              </div>
+              <div class="col-xl-12 text-center">
+                <h3>Column 5</h3>
+                <p></p>
+              </div>
           </div>
         </div>
         <footer class="page-footer font-small blue pt-4">
