@@ -297,7 +297,7 @@ window.addEventListener("load", function(){
 
   //STRING TRIMMER
     function countWords(){
-    //Clear list
+    //Clear list's
     var ul = document.getElementById("display","stats");
     while(ul.firstChild) ul.removeChild(ul.firstChild);
 
@@ -317,19 +317,17 @@ window.addEventListener("load", function(){
   //FILTER METHOD
   function voiceCheck(search){
     //words found count
-    var status = document.getElementById("stats");
     var found = [];
-
       for(var i = 0; i < search.length; i++){
         var myArray = keys.filter(function(word){
           if(word == search[i]){
-            document.getElementById('searchInput').value = '';
             found.push(gigVoice[search[i]]);
-            display.innerHTML += "<li class='list-group-item list-group-item-action'>" + search[i] + " : " + gigVoice[search[i]] + "</li>";
+              display.innerHTML += "<li class='list-group-item list-group-item-action'>" + search[i] + " : " + gigVoice[search[i]] + "</li>";
           }
         });
       }
       //system output word count
       stats.innerHTML = "<li class='list-group-item'> Found " + found.length + " of " + search.length + "</li>";
+      document.getElementById('searchInput').value = '';
   };
 });
