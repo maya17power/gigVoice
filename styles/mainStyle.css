@@ -2,17 +2,22 @@
 .jumbotron{
   padding-bottom: 0rem;
 }
-
 #gigVoice{
   font-family: 'Pacifico', cursive;
 }
 #subTitle{
   margin-top: 2rem;
 }
-#version {
+/* #version {
+
+} */
+.columns{
+  margin-top: 0px;
+  padding-top:10px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
 
 }
-
 .subTitleAndVersion {
     font-family: 'Gayathri', sans-serif;
 }
