@@ -293,6 +293,10 @@ window.addEventListener("load", function(){
   // const vals = Object.values(gigVoice); // just values of the keys
   // const objs = Object.entries(gigVoice); // all data
 
+  //Close sideMenu when menuOption is clicked
+  document.getElementById("menu").addEventListener("click",w3_close);
+
+  //When Go! button is clicked in wordSearch section
   document.getElementById("btnGo").addEventListener("click",countWords);
 
   //STRING TRIMMER
