@@ -20,13 +20,13 @@
     <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
       <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
       <ul id="menu" class="list-group list-group-flush">
-        <a href="index.html"><li class='list-group-item list-group-item-action'>Word Search</li></a>
-        <a href="#"><li class='list-group-item list-group-item-action'>Voice Descriptors</li></a>
-        <a href="#"><li class='list-group-item list-group-item-action'>Equipment Codes</li></a>
+        <a href="#wordSearch"><li class='list-group-item list-group-item-action'>Word Search</li></a>
+        <a href="#voiceDescriptors"><li class='list-group-item list-group-item-action'>Voice Descriptors</li></a>
+        <a href="#equipmentCodes"><li class='list-group-item list-group-item-action'>Equipment Codes</li></a>
       </ul>
     </div>
 
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center" id="wordSearch">
           <div id="main">
             <div class="text-left">
               <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
@@ -35,6 +35,7 @@
               <h1 id="gigVoice">gigVoice</h1>
               <p id="subTitle" class="subTitleAndVersion">2gig Panel Voice codes</p>
               <button id="btnVersion" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Version 1.2</button>
+
                 <div class="col-xl-12 text-center columns">
                   <p class="subTitleAndVersion">
                      <div class="input-group mb-3">
@@ -79,7 +80,7 @@
                        <p class="subTitleAndVersion text-left">
                          <small>
                            Version 1.2 brings new features and menu options. In this version installers can search single word or full sentences.</br>
-                           There is a status output above the input search box which displays the number of words entered and the number of matches found.</br>
+                           There is a status output below the input search box which displays the number of words entered and the number of matches found.</br>
                            All matching words are displayed below the input search box in green.</br>
                            We have added a side menu in preparation for future features which will allow installers to search by scrolling the list of available codes.</br>
                            Happy searching!
@@ -87,11 +88,11 @@
                        <p>
                    </div>
 
-                   <button onclick="myFunction('Demo3')" class="w3-btn w3-block w3-white w3-left-align"></button>
+                   <!-- <button onclick="myFunction('Demo3')" class="w3-btn w3-block w3-white w3-left-align"></button>
                    <div id="Demo3" class="w3-container w3-hide">
                      <h4>Section 3</h4>
                      <p>Some text..</p>
-                   </div>
+                   </div> -->
                    <!-- Modal body -->
 
                    <!-- Modal footer -->
@@ -108,26 +109,15 @@
           <div class="row">
             <div class="col-xl-12 text-center">
 
-              <div class="col-xl-12 text-center">
-              </div>
-
-              <div class="col-xl-12 text-center">
-              </div>
-
-              <div class="col-xl-12 text-center">
+              <div class="col-xl-12 text-center columns" id="voiceDescriptors">
                 <h3>Voice Descriptors</h3>
                 <p></p>
               </div>
 
-              <div class="col-xl-12 text-center">
+              <div class="col-xl-12 text-center columns" id="equipmentCodes">
                 <h3>Equipment Codes</h3>
                 <p></p>
               </div>
-
-              <!-- <div class="col-xl-12 text-center">
-                <h3>Column 5</h3>
-                <p></p>
-              </div> -->
 
             </div>
         </div>
