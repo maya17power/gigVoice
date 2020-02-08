@@ -13,8 +13,8 @@
 
 } */
 .columns{
-  padding-top:100px;
-  padding-bottom: 180px;
+  padding-top:50px;
+  padding-bottom: 10px;
 
 }
 .subTitleAndVersion {
@@ -35,4 +35,28 @@ ul #status li{
   list-style-type: none;
   font-size: .9em;
   color: green;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 5px 5px 0px 5px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: .5px solid #ddd;
+  margin: 0px 0px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 0px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #00FF41;
 }
