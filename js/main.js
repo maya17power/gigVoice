@@ -289,49 +289,111 @@ window.addEventListener("load", function(){
   SWITCH: "286"
 };
   const code = document.getElementById('code');
-  const keys = Object.keys(gigVoice); // just keys
+  const keys = Object.keys(gigVoice).sort(); // just keys
   // const vals = Object.values(gigVoice); // just values of the keys
   // const objs = Object.entries(gigVoice); // all data
 
-  //Close sideMenu when menuOption is clicked
+  //Close sideMenu when menuOption is clicked.
   document.getElementById("menu").addEventListener("click",w3_close);
 
-  //When Go! button is clicked in wordSearch section
+  //When Go! button is clicked in wordSearch section.
   document.getElementById("btnGo").addEventListener("click",countWords);
 
-  //STRING TRIMMER
-    function countWords(){
-    //Clear list's
+  //Trimm user input string before search agains gigVoice object's keys.
+  function countWords(){
+    //get display location into variable.
     var ul = document.getElementById("display","stats");
+
+    //remove any unordered list in DOM.
     while(ul.firstChild) ul.removeChild(ul.firstChild);
 
-    //Turn input to UpperCase
+    //turn user input to UpperCase since all gigVoice keys are upper case. For easy matching for now.
+    //will need to find a fix for apostrophe characters in a word.
     var w = document.getElementById("searchInput").value.toUpperCase();
+
     //remove end spacing
     w = w.replace(/(^\s*)|(\s*$)/gi,"");
+
     //gather 2 or more spacing to 1
     w = w.replace(/[ ]{2,}/gi," ");
+
     //exclude new line with start spacing
     w = w.replace(/\n /,"\n");
+
     //split string
     w = w.split(' ')
     return voiceCheck(w);
-    }
 
-  //FILTER METHOD
+  }
+
+  //search through gigVoice object variable according to user trimmed input.
   function voiceCheck(search){
-    //words found count
+    //save found words in found array variable.
     var found = [];
+
+    //loop through the length of user inputed words and check to see IF they match gigVoice object keys.
+    //if found, push that particular key to found array variable.
       for(var i = 0; i < search.length; i++){
         var myArray = keys.filter(function(word){
           if(word == search[i]){
             found.push(gigVoice[search[i]]);
+              //list out to DOM all the found words with their mathing object value.
               display.innerHTML += "<li class='list-group-item list-group-item-action'>" + search[i] + " : " + gigVoice[search[i]] + "</li>";
           }
         });
       }
-      //system output word count
+      //display in stats DOM location the number of found words compared to the number of words entered by user.
       stats.innerHTML = "<li class='list-group-item'> Found " + found.length + " of " + search.length + "</li>";
+
+      //default the input box placeholder.
       document.getElementById('searchInput').value = '';
   };
+
+  //set alpha variable with alpha id DOM location.
+  var alpha = document.getElementById('alpha');
+  //gather the first letter of every gigVoice object keys, remove any duplicates
+  //and display them in alpha DOM location.
+  function extractFirstLetter(words){
+    //store all found letters to letters array variable.
+    var letters = [];
+    //loop through gigVoice object and push first character of each object key to letters array.
+    words.forEach(function(l){
+      letters.push(l.charAt(0));
+    });
+    //remove any duplicate letters from letters array variable.
+    return Array.from(new Set(letters));
+
+  }
+
+    extractFirstLetter(keys).forEach((item) => {
+      alpha.innerHTML += "<a class='page-link'>" + item + "</a>";
+    });
+
+    var letterSelected = document.getElementById('alpha');
+
+    function displayWords(e){
+      //gather location of where to display the list of words.
+      var displayWords = document.getElementById('listWords');
+
+      //clear the list displayWord area on every selection.
+      while (displayWords.firstChild) displayWords.removeChild(displayWords.firstChild);
+
+      //gather the letter selected by end user in text format.
+      var char = e.originalTarget.innerText;
+
+      //test output.
+      console.log('You selected ' + char);
+
+      //iterate through keys object and find any matching letters end user has selected.
+      keys.forEach(function(w, i){
+        if(w.charAt(0) == char){
+          // console.log(w[i]);
+          displayWords.innerHTML += '<li class="list-group-item">'+ w + ' : ' + gigVoice[w] + '</li>';
+        }
+      });
+
+    }
+
+    letterSelected.addEventListener('click',displayWords,false);
+
 });
