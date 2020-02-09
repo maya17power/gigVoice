@@ -10,7 +10,6 @@
   margin-top: 2rem;
 }
 /* #version {
-
 } */
 .columns{
   padding-top:50px;
@@ -44,7 +43,7 @@ ul #status li{
 .pagination a {
   color: black;
   float: left;
-  padding: 5px 5px 0px 5px;
+  padding: 12px 12px 0px 12px;
   text-decoration: none;
   transition: background-color .3s;
   border: .5px solid #ddd;
