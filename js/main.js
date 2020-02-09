@@ -372,6 +372,8 @@ window.addEventListener("load", function(){
     var letterSelected = document.getElementById('alpha');
 
     function displayWords(e){
+      console.log(e);
+      
       //gather location of where to display the list of words.
       var displayWords = document.getElementById('listWords');
 
@@ -379,7 +381,7 @@ window.addEventListener("load", function(){
       while (displayWords.firstChild) displayWords.removeChild(displayWords.firstChild);
 
       //gather the letter selected by end user in text format.
-      var char = e.originalTarget.innerText;
+      var char = e.target.innerText;
 
       //test output.
       console.log('You selected ' + char);
