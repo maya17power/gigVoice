@@ -432,7 +432,7 @@ Q97:"Select soundon normal closing acknowledgment"
 }
   const code = document.getElementById('code');
   const keys = Object.keys(gigVoice).sort(); // just keys
-  const qCodeKeys = Object.keys(questionCode).sort();
+  const qCodeKeys = Object.keys(questionCode).sort(function(a,b){return a + b});
   const eCodeKeys = Object.keys(equipmentCode).sort();
 
   // const vals = Object.values(gigVoice); // just values of the keys
