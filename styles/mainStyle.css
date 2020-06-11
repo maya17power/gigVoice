@@ -1,123 +1,146 @@
+.jumbotron {
+    padding-bottom: 0rem;
+    /* background-color: black !important; */
+}
 
-.jumbotron{
-  padding-bottom: 0rem;
-  /* background-color: black !important; */
+#gigVoice {
+    font-family: 'Pacifico', cursive;
 }
-#gigVoice{
-  font-family: 'Pacifico', cursive;
+
+#subTitle {
+    margin-top: 2rem;
 }
-#subTitle{
-  margin-top: 2rem;
-}
+
+
 /* #version {
 } */
-.columns{
-  padding-top:50px;
-  padding-bottom: 10px;
 
+.columns {
+    padding-top: 50px;
+    padding-bottom: 10px;
 }
+
 .subTitleAndVersion {
     font-family: 'Gayathri', sans-serif;
     font-size: 1.1rem;
 }
-#btnVersion{
-  font-family: 'Gayathri', sans-serif;
-  font-size: .9em;
-  color: black;
-  background-color: transparent;
-  border: none;
+
+#btnVersion {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 1em;
+    color: white;
+    /* background-color: transparent;
+    border: solid; */
 }
-ul #status li{
-  display: inline;
+
+ul #status li {
+    display: inline;
 }
-#display li{
-  list-style-type: none;
-  font-size: .9em;
-  color: green;
+
+#display li {
+    list-style-type: none;
+    font-size: .9em;
+    color: green;
 }
 
 .pagination {
-  display: inline-block;
+    display: inline-block;
 }
 
 .pagination a {
-  color: black;
-  float: left;
-  padding: 12px 12px 0px 12px;
-  text-decoration: none;
-  transition: background-color .3s;
-  border: .5px solid #ddd;
-  margin: 0px 0px;
+    color: black;
+    float: left;
+    padding: 12px 12px 0px 12px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: .5px solid #ddd;
+    margin: 0px 0px;
 }
 
 .pagination a.active {
-  background-color: #4CAF50;
-  color: white;
-  border: 0px solid #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+    border: 0px solid #4CAF50;
 }
 
 .pagination a:hover:not(.active) {
-  background-color: #00FF41;
+    background-color: #00FF41;
 }
 
 
 /* The container must be positioned relative: */
+
 .custom-select {
- position: relative;
- font-family: Arial;
+    position: relative;
+    font-family: Arial;
 }
 
+
 /*hide original SELECT element: */
+
+
 /* .custom-select select {
  display: none;
 } */
 
 .select-selected {
- background-color: DodgerBlue;
+    background-color: DodgerBlue;
 }
+
 
 /* Style the arrow inside the select element: */
+
 .select-selected:after {
- position: absolute;
- content: "";
- top: 14px;
- right: 10px;
- width: 0;
- height: 0;
- border: 6px solid transparent;
- border-color: #fff transparent transparent transparent;
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
 }
+
 
 /* Point the arrow upwards when the select box is open (active): */
+
 .select-selected.select-arrow-active:after {
- border-color: transparent transparent #fff transparent;
- top: 7px;
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
 }
+
 
 /* style the items (options), including the selected item: */
-.select-items div,.select-selected {
- color: #ffffff;
- padding: 8px 16px;
- border: 1px solid transparent;
- border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
- cursor: pointer;
+
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
 }
+
 
 /* Style items (options): */
+
 .select-items {
- position: absolute;
- background-color: DodgerBlue;
- top: 100%;
- left: 0;
- right: 0;
- z-index: 99;
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
 }
+
 
 /* Hide the items when the select box is closed: */
+
 .select-hide {
- display: none;
+    display: none;
 }
 
-.select-items div:hover, .same-as-selected {
- background-color: rgba(0, 0, 0, 0.1);
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
 }
