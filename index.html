@@ -76,15 +76,15 @@
             </div>
 
 
-            <h1 id="gigVoice">gigVoice</h1>
+            <h1 id="gigVoice">gitVoice</h1>
             <p id="subTitle" class="subTitleAndVersion">2gig Panel Voice Codes</p>
-            <button id="btnVersion" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Version 1.2</button>
-
-            <div class="col-xl-12 text-center columns">
+            <button style="margin-bottom: 10px;" id="btnVersion" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Version 1.2</button>
+            <!-- 
+            <div class="col-xl-6 text-center columns">
                 <h4>Voice Descriptor Search</h4>
                 <p class="subTitleAndVersion">
                     <div class="input-group mb-3">
-                        <input type="text" id="searchInput" class="form-control" placeholder="Second Floor Bedroom Window, etc." aria-label="searchInput" aria-describedby="btnGo">
+                        <input autofocus type="text" id="searchInput" class="form-control" placeholder="Second Floor Bedroom Window, etc." aria-label="searchInput" aria-describedby="btnGo">
                         <div class="input-group-append">
                             <button class="btn btn-outline-primary" type="button" id="btnGo">Go!</button>
                         </div>
@@ -92,7 +92,7 @@
                 </p>
                 <ul class="list-group list-group-flush " id="stats"></ul>
                 <ul class="list-group list-group-flush" id="display"></ul>
-            </div>
+            </div> -->
 
             <!-- The Modal -->
             <div class="modal fade" id="myModal">
@@ -152,7 +152,23 @@
 
             <div class="subTitleAndVersion container">
                 <div class="row">
-                    <div class="col-xl-12 text-center">
+                    <div class="col-xl-2">
+                    </div>
+                    <div class="col-xl-8 text-center">
+
+
+                        <h4>Voice Descriptor Search</h4>
+                        <p class="subTitleAndVersion">
+                            <div class="input-group mb-3">
+                                <input autofocus type="text" id="searchInput" class="form-control" placeholder="Second Floor Bedroom Window, etc." aria-label="searchInput" aria-describedby="btnGo">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="button" id="btnGo">Go!</button>
+                                </div>
+                            </div>
+                        </p>
+                        <ul class="list-group list-group-flush " id="stats"></ul>
+                        <ul class="list-group list-group-flush" id="display"></ul>
+
 
                         <div class="col-xl-12 text-center columns" id="voiceDescriptors">
                             <h4>Voice Descriptor List</h4>
@@ -204,6 +220,7 @@
                         </div>
 
                     </div>
+                    <div class="col-xl-2"></div>
                 </div>
                 <footer class="page-footer font-small blue pt-4">
                     <div class="container-fluid text-center text-md-left">
